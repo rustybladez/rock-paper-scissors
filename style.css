@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(209, 209, 51);
+}
 
 .header {
     display: flex;
@@ -13,17 +16,26 @@
 
 .title {
     font-size: 72px;
+    margin-bottom: 1rem;
 }
 .choice-text {
     font-size: 48px;
 }
 
 .choice-image {
-    width: 200px;
+    width: 220px;
     height: 200px;
-
-    
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin-left: 0.05rem;
 }
+
+.choice-image:hover {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
+
 .rock-paper-scissors {
     display: flex;
     justify-content: space-evenly;
@@ -31,6 +43,8 @@
     width: 1000px;
     height: 300px;
     background-color: #ddd;
+    margin-bottom: 2rem;
+
 }
 
 .mid-section {
@@ -43,22 +57,32 @@
     justify-content:center;
     margin-left: 7rem;
     font-size: 32px;
+    margin-bottom: 2rem;
+    gap: 16rem;
+
 }
-.whitespace {
-    color: white;
-}
+
 .score-text {
     text-align: center;
     font-size: 48px;
+    margin-bottom: 1rem;
+
 }
 .score {
     display: flex;
     justify-content:center;
     margin-left: 7rem;
     font-size: 32px;
+    margin-bottom: 2rem;
+    gap: 16rem;
+
 }
 
-.result {
+.turn-result {
+    margin-right: 4rem;
+}
+
+.turn-result, .result {
     text-align: center;
     font-size: 24px;
     font-weight: bolder;
