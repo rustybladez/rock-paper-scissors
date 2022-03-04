@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="game.js"></script> -->
     <script src="gameWithUI.js" defer></script>
 </head>
 <body>
     <div class="header">
         <h1 class="title">Rock Paper Scissors</h1>
-        <h2 class="rules"><a href="#">HOW TO PLAY</a></h2>
+        <button data-modal-target="#modal"><span class="how-to-play">HOW TO PLAY</span></button>
+        <!-- MODAL START-->
+        <div class="modal active" id="modal">
+            <div class="modal-header">
+                <div class="modal-title">HOW TO PLAY</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-text">Simple Rock Paper Scissors game. Nothing fancy. You pick one of the three options. And the computer chooses one randomly.</p>
+                <br>
+                <ul class="modal-text">
+                    <li>👉 Rock beats Scissors</li>
+                    <li>👉 Scissors beats Paper</li>
+                    <li>👉 Paper beats Scissors</li>
+                    <li>👉 If both of you choose the same option, it's a tie</li>
+                </ul>
+                <br>
+                <p class="modal-text">After each win, you get 1 point. First to reach 10 points wins the session.</p>
+                <br>
+                <p class="modal-text"><strong>WARNING: </strong>I don't know why, but the AI seems to be super hard to beat. If it's a bug, do let me know. I'm still a noob :)</p>
+                <br>
+                <p class="modal-text"><strong>Tip: </strong>Keep your browser screen at 75% to see the full game content</p>
+                <br>
+                <p class="modal-text">Have fun :D</p>
+            </div>            
+        </div>
+        <div class="active" id="overlay"></div>
+        <!-- MODAL FINISH  -->
         <h2 class="choice-text">~~~Pick Your Choice~~~</h2>
     </div>
    <div class="mid-section"> 

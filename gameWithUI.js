@@ -69,8 +69,7 @@ function computerPlay() {
 }
 
 function playRound(computerReturnChoice) {
-// let computerChoice = ['Rock', 'Paper', 'Scissors']
-// let computerReturnChoice = computerChoice[Math.floor((Math.random() * computerChoice.length))];
+
 
       if (document.querySelector(".player-selection").textContent ==='You: Rock' && computerReturnChoice === 'Paper'){          
         computerScore += 1;
@@ -113,4 +112,43 @@ function declareWinner() {
     } else if(document.querySelector(".computer-score").textContent =="Computer: 10") {
     document.querySelector(".final-result").textContent = "Computer defeated you. Better luck next time!"
     }
+}
+
+// MODAL CODE
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
 }

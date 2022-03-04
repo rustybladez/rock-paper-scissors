@@ -18,6 +18,79 @@ body {
     font-size: 72px;
     margin-bottom: 1rem;
 }
+
+.how-to-play {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 800px;
+    max-width: 80%;
+}
+ul {
+    list-style-type: none;
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.modal-text {
+    font-size: 20px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
 .choice-text {
     font-size: 48px;
 }
@@ -25,14 +98,16 @@ body {
 .choice-image {
     width: 220px;
     height: 200px;
-    border: .4rem solid black;
+    
     border-radius: .5rem;
+    padding: .5rem;
+    background-color: black;
     margin-left: 0.2rem;
 }
 
 .choice-image:hover {
     transform: scale(1.1);
-    border-color: #ffc600;
+    background-color: #ffc600;
     box-shadow: 0 0 1rem #ffc600;
     cursor: pointer;
 }
