@@ -37,6 +37,7 @@ body {
     width: 800px;
     max-width: 80%;
 }
+
 ul {
     list-style-type: none;
 }
@@ -53,12 +54,12 @@ ul {
 
 }
 
-.modal-title {
+.modal-header .modal-title {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.close-button {
+.modal-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
