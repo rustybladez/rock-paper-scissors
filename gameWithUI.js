@@ -107,11 +107,25 @@ function computerScoreCalc(){
 }
 
 function declareWinner() {
-      if(document.querySelector(".player-score").textContent =="You: 10") { 
-    document.querySelector(".final-result").textContent = "Wow! You beat the Computer. Congratulations!"
-    } else if(document.querySelector(".computer-score").textContent =="Computer: 10") {
-    document.querySelector(".final-result").textContent = "Computer defeated you. Better luck next time!"
-    }
+
+    if(myScore == 10) {
+        if(confirm("Wow! You beat the Computer. Congratulations! Wanna Play Again?")) {
+          location.reload();
+        } 
+    } else if(computerScore == 10) {
+        if(confirm("Computer defeated you. Better luck next time! Wanna Play Again?")) {
+          location.reload();
+        }
+    
+}
+}
+function playAgain() {
+  document.querySelector(".player-score").textContent == "You: "
+  document.querySelector(".computer-score").textContent == "Computer: "
+  document.querySelector(".player-selection").textContent == "You: "
+  document.querySelector(".computer-selection").textContent == "Computer: "
+  myScore = 0;
+  computerScore = 0;
 }
 
 // MODAL CODE
