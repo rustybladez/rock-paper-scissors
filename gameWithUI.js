@@ -27,7 +27,6 @@ paper.addEventListener("click", computerScoreCalc)
 paper.addEventListener("click", declareWinner)
 
 
-
 const scissors = document.querySelector('.scissors')
 scissors.addEventListener("click", playerPlayScissors)
 scissors.addEventListener("click", computerPlay)
@@ -35,7 +34,6 @@ scissors.addEventListener("click", playRound)
 scissors.addEventListener("click", playerScoreCalc)
 scissors.addEventListener("click", computerScoreCalc)
 scissors.addEventListener("click", declareWinner)
-
 
 function reset() {
     document.querySelector(".player-selection").textContent = "You: "
@@ -106,18 +104,39 @@ function computerScoreCalc(){
     document.querySelector(".computer-score").textContent += computerScore
 }
 
+function gameOver() {
+    rock.removeEventListener("click", playerPlayRock)
+    rock.removeEventListener("click", computerPlay)
+    rock.removeEventListener("click", playRound)
+    rock.removeEventListener("click", playerScoreCalc)
+    rock.removeEventListener("click", computerScoreCalc)
+
+    paper.removeEventListener("click", playerPlayPaper)
+    paper.removeEventListener("click", computerPlay)
+    paper.removeEventListener("click", playRound)
+    paper.removeEventListener("click", playerScoreCalc)
+    paper.removeEventListener("click", computerScoreCalc)
+
+    scissors.removeEventListener("click", playerPlayScissors)
+    scissors.removeEventListener("click", computerPlay)
+    scissors.removeEventListener("click", playRound)
+    scissors.removeEventListener("click", playerScoreCalc)
+    scissors.removeEventListener("click", computerScoreCalc)
+}
+
 function declareWinner() {
 
     if(myScore == 10) {
-        if(confirm("Wow! You beat the Computer. Congratulations! Wanna Play Again?")) {
-          location.reload();
-        } 
+      document.querySelector('.play-again').style.display = 'block';
+      document.querySelector('.final-result').textContent = "Wow! You beat the Computer. Congratulations!"
+      gameOver()
     } else if(computerScore == 10) {
-        if(confirm("Computer defeated you. Better luck next time! Wanna Play Again?")) {
-          location.reload();
-        }
-    
+      document.querySelector('.final-result').textContent = "Computer defeated you! Better luck next time."
+      document.querySelector('.play-again').style.display = 'block';
+      gameOver()
 }
+    
+
 }
 function playAgain() {
   document.querySelector(".player-score").textContent == "You: "

@@ -22,6 +22,28 @@ body {
 .how-to-play {
     font-size: 24px;
     font-weight: bold;
+    color: #ddd;
+}
+
+.how-to-play-btn {
+    background-color: rgb(212, 85, 212);
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.play-again {
+    background-color: rgb(212, 85, 212);
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ddd;
+     display: none;
+}
+
+.how-to-play-btn:hover {
+    background-color: rgb(126, 44, 126);
+    cursor: pointer;
 }
 
 .modal {
@@ -129,6 +151,21 @@ ul {
     justify-content: center;
 }
 
+.game-over {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-result {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bolder;
+    margin-left: 5rem;
+    display: block;
+}
+
 .turn-selection {
     display: flex;
     justify-content:center;
@@ -159,7 +196,7 @@ ul {
     margin-right: 4rem;
 }
 
-.turn-result, .result , .final-result{
+.turn-result, .result {
     text-align: center;
     font-size: 24px;
     font-weight: bolder;

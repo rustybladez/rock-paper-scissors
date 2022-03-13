@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <h1 class="title">Rock Paper Scissors</h1>
-        <button data-modal-target="#modal"><span class="how-to-play">HOW TO PLAY</span></button>
+        <button class="how-to-play-btn" data-modal-target="#modal"><span class="how-to-play">HOW TO PLAY</span></button>
         <!-- MODAL START-->
         <div class="modal" id="modal">
             <div class="modal-header">
@@ -44,10 +44,14 @@
    <div class="mid-section"> 
     <div class="rock-paper-scissors">
         <img class="choice-image rock" src="rock.jpg" alt="rock">
-        <img class="choice-image paper" src="paper.jpg" alt="rock">
-        <img class="choice-image scissors" src="scissors.jpg" alt="rock">
+        <img class="choice-image paper" src="paper.jpg" alt="paper">
+        <img class="choice-image scissors" src="scissors.jpg" alt="scissors">
     </div>
    </div>
+    <div class="game-over">
+        <p class="final-result"></p>
+        <button class="play-again" onclick="window.location.reload()" >PLAY AGAIN</button>
+    </div>
     <div class="turn-selection">
         <h2 class="player-selection">You: </h2>
         <h2 class="computer-selection">Computer: </h2>
@@ -61,7 +65,7 @@
         <h2 class="computer-score">Computer: </h2>
     </div>
     <div>
-        <p class="final-result"></p>
+        
     </div> 
 </body>
 </html>
